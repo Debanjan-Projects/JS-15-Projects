@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Dark/Light Mode</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MyWebsite</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button id="toggle-btn">
+      <i id="moon-icon" class="fa-solid fa-moon"></i>
+      <i id="sun-icon" class="fa-solid fa-sun" style="display: none;"></i>
+    </button>
+  </nav>
+
+  <!-- Page Content-->
+  <section class="content">
+    <h1>Welcome to My Web Page</h1>
+    <p>Click the toggle button to switch between Dark and Light Mode.</p>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById("toggle-btn");
+    const body = document.body;
+    const moonIcon = document.getElementById("moon-icon");
+    const sunIcon = document.getElementById("sun-icon");
+
+    toggleBtn.onclick = function () {
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        moonIcon.style.display = "none";
+        sunIcon.style.display = "block";
+      } else {
+        moonIcon.style.display = "block";
+        sunIcon.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>

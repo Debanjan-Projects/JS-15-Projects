@@ -1,0 +1,141 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1db954, #191414);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+}
+
+.music-player {
+  background: #222;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Top nav */
+.music-player nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 45px;
+  height: 45px;
+  background: #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.circle:hover {
+  background: #1db954;
+  transform: scale(1.1);
+}
+
+/* Song cover */
+.song-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #1db954;
+  margin: 20px 0;
+  animation: spin 12s linear infinite;
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.6);
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* Progress bar */
+#progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background: #444;
+  margin: 20px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(to right, #1db954 0%, #444 0%);
+}
+
+/* Thumb */
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #1db954;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px;
+  transition: 0.2s;
+}
+
+#progress::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  font-size: 1.8rem;
+  margin-top: 15px;
+}
+
+.controls i {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls i:hover {
+  color: #1db954;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(29, 185, 84, 0.8);
+}
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structured Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-wrapper">
+      <h2>Register Account</h2>
+      <form id="myForm" novalidate>
+
+        <!-- Full Name -->
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
+          <span class="error-message">Name is required</span>
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+          <span class="error-message">Valid email is required</span>
+        </div>
+
+        <!-- Phone -->
+        <div class="input-group">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" placeholder="Enter your phone number">
+          <span class="error-message">Phone number is required</span>
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password">
+          <span class="error-message">Password is required</span>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="input-group">
+          <label for="cpassword">Confirm Password</label>
+          <input type="password" id="cpassword" placeholder="Re-enter password">
+          <span class="error-message">Passwords do not match</span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">Register</button>
+        <span id="submit-error" class="error-message">Please fix errors above</span>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

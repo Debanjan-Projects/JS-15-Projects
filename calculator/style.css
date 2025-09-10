@@ -1,0 +1,106 @@
+/* General Page Styling  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/*  Calculator Container  */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.calculator form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Display Styling  */
+.display input {
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px;
+  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.2),
+              inset -2px -2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/*  Buttons Layout */
+.calculator div {
+  display: flex;
+  gap: 12px;
+}
+
+input[type="button"] {
+  flex: 1;
+  height: 60px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2),
+              -2px -2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/*  Hover + Active Effects */
+input[type="button"]:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+input[type="button"]:active {
+  transform: translateY(2px);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/*  Operators Styling */
+.operator {
+  background: rgba(255, 99, 132, 0.3);
+  color: #ff6b81;
+}
+
+.operator:hover {
+  background: rgba(255, 99, 132, 0.5);
+}
+
+/*  Equal Button  */
+.equal {
+  flex: 2;
+  background: rgba(0, 200, 255, 0.3);
+  color: #00e6ff;
+}
+
+.equal:hover {
+  background: rgba(0, 200, 255, 0.5);
+}

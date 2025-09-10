@@ -1,0 +1,126 @@
+/* -------- Global Styles -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------- Buttons -------- */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+button:nth-child(1) {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #fff;
+}
+
+button:nth-child(1):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+button:nth-child(2) {
+  background: linear-gradient(135deg, #f85032, #e73827);
+  color: #fff;
+}
+
+button:nth-child(2):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+button:nth-child(3) {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  color: #333;
+}
+
+button:nth-child(3):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* -------- Toast Box -------- */
+#toastBox {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+/* -------- Toast Message -------- */
+.toast {
+  min-width: 250px;
+  max-width: 300px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  animation: slideIn 0.5s ease, fadeOut 0.5s ease 3s forwards;
+  position: relative;
+}
+
+/* Success */
+.toast.success {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+/* Error */
+.toast.error {
+  background: linear-gradient(135deg, #f85032, #e73827);
+}
+
+/* Invalid */
+.toast.invalid {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  color: #333;
+}
+
+/* -------- Animations -------- */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

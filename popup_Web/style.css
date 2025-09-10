@@ -1,0 +1,96 @@
+/* General Page Styling  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/*  Submit Button Styling */
+.btn {
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: #4cafef;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #3c9be0;
+  transform: translateY(-2px);
+}
+
+/*  Popup Styling  */
+.popup {
+  width: 350px;
+  background: #fff;
+  border-radius: 16px;
+  text-align: center;
+  padding: 30px 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s ease, top 0.4s ease;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/*  Open Popup Class  */
+.open-Popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Popup Image */
+.popup img {
+  width: 80px;
+  margin-top: -40px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*  Popup Text  */
+.popup h2 {
+  font-size: 1.6rem;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.popup p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/*  OK Button  */
+.popup button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #4caf50;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup button:hover {
+  background: #3a9c42;
+}

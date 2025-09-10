@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stop_watch">
+        <h1 id="displayTime">00:00:00</h1>
+        <div class="buttons">
+            <!-- Start Button -->
+            <img src="./start-button-icon-lg.png" 
+                 alt="Start" onclick="watchStart()">
+
+            <!-- Stop Button -->
+            <img src="./stop-solid-full.svg" 
+                 alt="Stop" onclick="watchStop()">
+
+            <!-- Reset Button -->
+            <img src="https://cdn-icons-png.flaticon.com/512/2618/2618245.png" 
+                 alt="Reset" onclick="watchReset()">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

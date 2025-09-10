@@ -1,0 +1,52 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("https://images.unsplash.com/photo-1523275335684-37898b6baf30") no-repeat center center/cover;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Stopwatch Container */
+.stop_watch {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Display */
+#displayTime {
+  font-size: 50px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Buttons Layout */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Button Style */
+.buttons img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.buttons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}

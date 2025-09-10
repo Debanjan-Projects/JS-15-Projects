@@ -1,0 +1,116 @@
+/* -------- Global Styles -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* -------- Container -------- */
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* -------- Title -------- */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+h1 img {
+  width: 40px;
+  height: 40px;
+}
+
+/* -------- Button -------- */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 25px;
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* -------- Notes Container -------- */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* -------- Individual Note -------- */
+.input-box {
+  background: #fff9c4;
+  border-radius: 12px;
+  padding: 15px;
+  min-height: 120px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.input-box img {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.input-box img:hover {
+  opacity: 1;
+}
+
+/* -------- Animations -------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
